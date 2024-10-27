@@ -95,7 +95,7 @@ main {
   justify-content: center;
   border: 1px solid rgb(131, 131, 131);
   border-radius: 0.25rem;
-  height: 34rem;
+  min-height: 30%;
   align-items: center;
 }
 
@@ -189,13 +189,18 @@ footer {
 
 .copyright {
   font-size: 1.2rem;
+  justify-content: center;
+}
+
+.copyright > p {
+  text-align: center;
 }
 
 /* Media querie */
 @media (width >= 576px) {
 body {
     grid-template-areas: "menu buscar" "menu main" "footer main";
-    grid-template-columns: 1fr 6fr;
+    grid-template-columns: 2fr 6fr;
     grid-template-rows: 10% 80% 10%;
   }
 
@@ -271,8 +276,8 @@ ul > li:hover {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 22%;
-    height: 36.5rem;
+    width: 45%;
+    height: 25rem;
   }
 
 .card-grilla {
@@ -282,8 +287,8 @@ ul > li:hover {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 22%;
-    height:36.5rem;
+    width: 45%;
+    height:25rem;
   }
 
 footer {
@@ -309,4 +314,123 @@ footer {
     color: #ffffff;
     font-weight: 600;
   }
+}
+
+  @media (width >= 992px) {
+    body {
+        grid-template-areas: "menu buscar" "menu main" "footer main";
+        grid-template-columns: 1.5fr 6fr;
+        grid-template-rows: 10% 80% 10%;
+      }
+
+    menu {
+        justify-content: flex-start;
+        flex-direction: column;
+        padding: 1.5rem;
+        height: calc(100vh - 10%);
+      }
+
+    .logo {
+        padding-top: 1rem;
+        padding-left: 0rem;
+      }
+
+    .buscar {
+        background-color: #ffffff;
+      }
+
+    select {
+        width: 80%;
+        border-style: solid;
+        border-color: #c9c5ca;
+        border-width: 2px;
+        border-radius: 8px;
+        padding: 12px;
+        margin: 0.5rem;
+      }
+
+    main {
+        height: calc(100vh - 15%);
+      }
+
+    .hamburguesa {
+        display: none;
+      }
+
+    menu > div > img {
+        width: 3rem;
+      }
+
+    ul {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        padding-top: 4rem;
+        list-style: none;
+        justify-content: center;
+        align-items: center;
+      }
+
+    ul > li {
+        font-size: 20px;
+        padding-bottom: 15px;
+        cursor: pointer;
+        color: #adaeb1;
+      }
+
+    ul > li:hover {
+        color: #ffffff;
+        font-weight: 600;
+      }
+
+    .cards-productos {
+        overflow-y: scroll;
+        flex-wrap: wrap;
+      }
+
+    .card-movil {
+        border: 1px solid rgb(209, 206, 206);
+        border-radius: 0.25rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 32%;
+        height: 36.5rem;
+      }
+
+    .card-grilla {
+        border: 1px solid rgb(209, 206, 206);
+        border-radius: 0.25rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 32%;
+        height:36.5rem;
+      }
+
+    footer {
+        font-size: 18px;
+      }
+
+    .rrss {
+        font-size: x-large;
+        margin-bottom: 10px;
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+        justify-content: center;
+        align-items: center;
+      }
+
+    .rrss > i:hover {
+        color: #ffffff;
+        font-weight: 600;
+      }
+
+    .copyright:hover {
+        color: #ffffff;
+        font-weight: 600;
+      }
 }
