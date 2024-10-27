@@ -428,6 +428,10 @@ footer {
         color: #ffffff;
         font-weight: 600;
       }
+      .copyright {
+      padding-left: 2px;
+      padding-right: 2px;
+      }
 
     .copyright:hover {
         color: #ffffff;
